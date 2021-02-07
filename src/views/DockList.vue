@@ -1,24 +1,31 @@
 <template>
   <!--列表容器-->
   <div class="home">
-    pageId:{{pageId}}<br>
-    按钮<br>
-    查询控件<br>
-    显示列表<br>
-    分页控件<br>
+    <nfFind/>
+    <nfButton/><br>
+    <nfGrid/>
+    <nfPager/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import nfButton from '@/components/public/nfButton.vue'
+import nfFind from '@/components/public/nfFind.vue'
+import nfGrid from '@/components/public/nfGrid.vue'
+import nfPager from '@/components/public/nfPager.vue'
 
 export default {
   name: 'DockList',
+  components: {
+    nfButton,
+    nfFind,
+    nfPager,
+    nfGrid
+  },
   props: {
     pageId: Number
-  },
-  components: {
   }
 }
 </script>

@@ -20,9 +20,7 @@
       :key="item.name + index"
       :label="item.title"
       :name="item.name"
-    >
-      {{item.content}}
-    </el-tab-pane>
+    ></el-tab-pane>
   </el-tabs>
 </template>
 
@@ -34,12 +32,12 @@ export default {
     const editableTabs = reactive([{
       title: 'Tab 1',
       name: '1',
-      content: 'Tab 1 content'
+      content: ''
     },
     {
       title: 'Tab 2',
       name: '2',
-      content: 'Tab 2 content'
+      content: ''
     }])
     const tabIndex = ref(1)
 

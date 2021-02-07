@@ -61,15 +61,15 @@ export default {
   }
 
   .el-aside {
-    background-color: #D3DCE6;
+    background-color: #92969b;
     color: #333;
     text-align: center;
   }
 
   .el-main {
-    background-color: #E9EEF3;
+    background-color: #fafafa;
     color: #333;
-    text-align: center;
+    text-align: left;
   }
 
   body > .el-container {

@@ -22,7 +22,16 @@ const routes = [
     name: 'listPage',
     meta: { title: '列表页面' },
     props: true,
-    component: listPage
+    component: listPage,
+    children: [
+      {
+        path: 'btn/:btnId',
+        name: 'btnDiv',
+        props: true,
+        meta: { title: '弹窗页面' },
+        component: Home
+      }
+    ]
     // components: {
     //  default: () => import('../views/classical/question-main-introduce.vue'),
     //  answerList: () => import('../views/classical/question-main-answers.vue')
