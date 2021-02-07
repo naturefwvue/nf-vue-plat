@@ -10,9 +10,9 @@
         <el-container>
           <el-main>
             <!--动态标签-->
-            222
+            <nfTabs/>
             <!--列表页面-->
-            Main<router-view></router-view>
+            <router-view></router-view>
           </el-main>
           <el-footer>Footer</el-footer>
         </el-container>
@@ -25,6 +25,7 @@
 <script>
 
 import NavMenu from '@/components/public/NavMenu.vue'
+import nfTabs from '@/components/public/nfTabs.vue'
 
 export default {
   name: 'appMain',
@@ -32,7 +33,8 @@ export default {
     msg: String
   },
   components: {
-    NavMenu
+    NavMenu,
+    nfTabs
   },
   setup () {
     const handleOpen = (key, keyPath) => {
