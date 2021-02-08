@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
-import listPage from '../views/DockList.vue'
+import packList from '../views/PackList.vue'
 
 const routes = [
   {
@@ -18,15 +18,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/list/:pageId',
-    name: 'listPage',
+    path: '/module/:moduleId',
+    name: 'module',
     meta: { title: '列表页面' },
     props: true,
-    component: listPage,
+    component: packList,
     children: [
       {
-        path: 'btn/:btnId',
-        name: 'btnDiv',
+        path: 'btn/:moduleId',
+        name: 'btn',
         props: true,
         meta: { title: '弹窗页面' },
         component: Home

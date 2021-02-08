@@ -2,7 +2,7 @@
   <!--列表容器-->
   <div class="home">
     <nfFind/>
-    <nfButton/><br>
+    <nfButton/>{{moduleId}}<br>
     <nfGrid/>
     <nfPager/>
     <router-view></router-view>
@@ -15,9 +15,10 @@ import nfButton from '@/components/public/nfButton.vue'
 import nfFind from '@/components/public/nfFind.vue'
 import nfGrid from '@/components/public/nfGrid.vue'
 import nfPager from '@/components/public/nfPager.vue'
+import { useStore } from 'vuex'
 
 export default {
-  name: 'DockList',
+  name: 'PackList',
   components: {
     nfButton,
     nfFind,
@@ -25,7 +26,13 @@ export default {
     nfGrid
   },
   props: {
-    pageId: Number
+    moduleId: Number
+  },
+  setup () {
+    const store = useStore()
+    const aa = store.state.actionManage.tabs
+
+    console.log('aa', aa)
   }
 }
 </script>

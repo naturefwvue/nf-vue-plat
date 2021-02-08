@@ -25,20 +25,15 @@
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { ref } from 'vue'
+import { useStore } from 'vuex'
+
 export default {
   setup () {
+    const store = useStore()
+
     const editableTabsValue = ref('2')
-    const editableTabs = reactive([{
-      title: 'Tab 1',
-      name: '1',
-      content: ''
-    },
-    {
-      title: 'Tab 2',
-      name: '2',
-      content: ''
-    }])
+    const editableTabs = store.state.actionManage.tabs
     const tabIndex = ref(1)
 
     // 事件

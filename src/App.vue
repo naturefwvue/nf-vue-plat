@@ -63,7 +63,7 @@ export default {
   .el-aside {
     background-color: #92969b;
     color: #333;
-    text-align: center;
+    text-align: left;
   }
 
   .el-main {
